@@ -1,0 +1,128 @@
+main {
+  background-color: #000; /* Black background */
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* White shadow for contrast */
+  height: 100%;
+  overflow-y: auto;
+  display: grid;
+  gap: 3rem;
+  color: #ff0000; /* Red text color */
+  transition: background-color 0.5s ease; /* Smooth background transition */
+}
+
+main:hover {
+  background-color: #111; /* Slightly darker black on hover */
+}
+
+.product-card {
+  border-radius: 1rem;
+  padding: 1rem;
+  height: auto;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1); /* White shadow for contrast */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.product-card__image__container {
+  height: 15rem;
+  border-radius: 1rem;
+  overflow: hidden; /* Hide image overflow */
+}
+
+.product-card__image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Cover the entire container */
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.product-card__image:hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.product-card__details {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+h1 {
+  font-size: 2.5rem; /* Larger font size */
+  font-weight: bold; /* Bold text */
+  text-align: center;
+  color: #ff0000; /* Red text color */
+  padding-bottom: 2rem;
+}
+
+.product-card__details__name {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  color: #ff0000; /* Red text color */
+  font-weight: bold; /* Bold text */
+}
+
+.product-card__details__description {
+  line-height: 1.5rem;
+  flex-grow: 1;
+  color: #ff0000; /* Red text color */
+}
+
+.product-card__details__price {
+  font-size: 1.5rem;
+  padding: 1rem 0;
+  color: #ff0000; /* Red text color */
+  font-weight: bold; /* Bold text */
+}
+
+.button-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button-cart,
+.button-buy {
+  background-color: #ff0000; /* Red for buttons */
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Add transform transition */
+  border: none; /* Remove default button border */
+}
+
+.button-cart:hover {
+  background-color: #800000; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.button-buy:hover {
+  background-color: #800000; /* Darker red on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+@media (max-width: 767px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
